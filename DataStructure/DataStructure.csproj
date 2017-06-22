@@ -48,6 +48,7 @@
     <Compile Include="InterviewQuestion\FizzBuzz\Mod35.cs" />
     <Compile Include="InterviewQuestion\Palindrom.cs" />
     <Compile Include="InterviewQuestion\Recursive.cs" />
+    <Compile Include="InterviewQuestion\StarTrees.cs" />
     <Compile Include="LinkedList\MyEquivalence.cs" />
     <Compile Include="LinkedList\MyLinkList.cs" />
     <Compile Include="LinkedList\MyNode.cs" />

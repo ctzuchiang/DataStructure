@@ -65,6 +65,7 @@
     <Compile Include="InterviewQuestion\FizzBuzz\Mod35Test.cs" />
     <Compile Include="InterviewQuestion\PalindromTests.cs" />
     <Compile Include="InterviewQuestion\RecursiveTest.cs" />
+    <Compile Include="InterviewQuestion\StarTreesTest.cs" />
     <Compile Include="LinkedList\EquivalenceTest.cs" />
     <Compile Include="LinkedList\MyLinkListTests.cs" />
     <Compile Include="LinkedList\MyLinkListTests2.cs" />
