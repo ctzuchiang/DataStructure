@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Diagnostics;
 using System.Linq;
 using DataStructure.Sorting;
@@ -13,6 +12,7 @@ namespace DataStructureTest.Sorting
     {
         private int[] _Data;
         private const int _DataQuantity = 1000;
+        private const int _MaxRndnumber = 5000;
         
         [TestInitialize]
         public void SetUp()
@@ -22,7 +22,7 @@ namespace DataStructureTest.Sorting
             _Data = new int[_DataQuantity];
             for (int i = 0; i < _DataQuantity; i++)
             {
-                _Data[i] = rnd.Next(0, 5000);
+                _Data[i] = rnd.Next(0, _MaxRndnumber);
             }
         }
 
@@ -35,6 +35,22 @@ namespace DataStructureTest.Sorting
 
             watch.Start();
             var actual = new MySorting().Sorting(_Data);
+            watch.Stop();
+
+            Console.WriteLine(watch.Elapsed);
+
+            expected.ToExpectedObject().ShouldEqual(actual);
+        }
+
+        [TestMethod]
+        public void BucketSortingTest()
+        {
+            var expected = _Data.OrderBy(i => i).ToArray();
+
+            Stopwatch watch = new Stopwatch();
+
+            watch.Start();
+            var actual = new MySorting().BucketSorting(_Data);
             watch.Stop();
 
             Console.WriteLine(watch.Elapsed);
