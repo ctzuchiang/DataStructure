@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace DataStructure
+namespace DataStructure.InterviewQuestion
 {
     public class Palindrom
     {

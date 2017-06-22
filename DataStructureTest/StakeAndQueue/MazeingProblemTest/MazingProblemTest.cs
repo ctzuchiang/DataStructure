@@ -5,7 +5,7 @@ using DataStructure.MazingProblem;
 using DataStructure.StakeAndQueue;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace StackAndQueueTest.MazeingProblemTest
+namespace DataStructureTest.StakeAndQueue.MazeingProblemTest
 {
     [TestClass]
     public class MazingProblemTest

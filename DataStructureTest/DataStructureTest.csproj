@@ -59,15 +59,24 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BlockPairTests.cs" />
-    <Compile Include="FizzBuzz\Mod35Test.cs" />
-    <Compile Include="FizzBuzz\FizzBuzzTest.cs" />
-    <Compile Include="InfixToPostfixTest.cs" />
+    <Compile Include="InfixToPostfix\InfixToPostfixTest.cs" />
+    <Compile Include="InterviewQuestion\BlockPairTests.cs" />
+    <Compile Include="InterviewQuestion\FizzBuzz\FizzBuzzTest.cs" />
+    <Compile Include="InterviewQuestion\FizzBuzz\Mod35Test.cs" />
+    <Compile Include="InterviewQuestion\PalindromTests.cs" />
+    <Compile Include="InterviewQuestion\RecursiveTest.cs" />
+    <Compile Include="LinkedList\EquivalenceTest.cs" />
+    <Compile Include="LinkedList\MyLinkListTests.cs" />
+    <Compile Include="LinkedList\MyLinkListTests2.cs" />
+    <Compile Include="LinkedList\MyPolynomialTest.cs" />
     <Compile Include="MyMath\MyMathTests.cs" />
-    <Compile Include="PalindromTests.cs" />
-    <Compile Include="PolynomialTest.cs" />
+    <Compile Include="Polynomial\PolynomialTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecursiveTest.cs" />
+    <Compile Include="StakeAndQueue\MazeingProblemTest\MazingProblemTest.cs" />
+    <Compile Include="StakeAndQueue\StakeAndQueueTest\MyCircularQueueTest.cs" />
+    <Compile Include="StakeAndQueue\StakeAndQueueTest\MyQueueTest.cs" />
+    <Compile Include="StakeAndQueue\StakeAndQueueTest\MyStackTest.cs" />
+    <Compile Include="UnionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataStructure\DataStructure.csproj">

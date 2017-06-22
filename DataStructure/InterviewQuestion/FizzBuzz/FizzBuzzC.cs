@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DataStructure.FizzBuzz
+namespace DataStructure.InterviewQuestion.FizzBuzz
 {
     public class FizzBuzzC
     {

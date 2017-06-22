@@ -1,7 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DataStructure.LinkedList;
+﻿using DataStructure.LinkedList;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MyLinkListTests
+namespace DataStructureTest.LinkedList
 {
 	[TestClass]
 	public class MyLinkListTests

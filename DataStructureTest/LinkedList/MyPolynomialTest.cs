@@ -1,17 +1,15 @@
-﻿using DataStructure;
-using DataStructure.Polynomial;
+﻿using DataStructure.Polynomial;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DataStructureTest
+namespace DataStructureTest.LinkedList
 {
     [TestClass]
-    public class PolynomialTest
+    public class MyPolynomialTest
     {
-
         [TestMethod]
         public void TestCoef()
         {
-            Polynomial p = new Polynomial();
+            DataStructure.Polynomial.Polynomial p = new DataStructure.Polynomial.Polynomial();
             p.SetItem(20, 3);
             p.SetItem(5, 2);
             p.SetItem(0, 4);
@@ -24,7 +22,7 @@ namespace DataStructureTest
         [TestMethod]
         public void TestLeadExp()
         {
-            Polynomial p = new Polynomial();
+            DataStructure.Polynomial.Polynomial p = new DataStructure.Polynomial.Polynomial();
             p.SetItem(20, 3);
             p.SetItem(5, 2);
             p.SetItem(0, 4);
@@ -35,18 +33,18 @@ namespace DataStructureTest
         [TestMethod]
         public void AddTest()
         {
-            Polynomial p = new Polynomial();
+            DataStructure.Polynomial.Polynomial p = new DataStructure.Polynomial.Polynomial();
             p.SetItem(20, 3);
             p.SetItem(5, 2);
             p.SetItem(0, 4);
 
-            Polynomial p2 = new Polynomial();
+            DataStructure.Polynomial.Polynomial p2 = new DataStructure.Polynomial.Polynomial();
             p2.SetItem(4, 1);
             p2.SetItem(3, 10);
             p2.SetItem(2, 3);
             p2.SetItem(0, 1);
 
-            Polynomial polyAdd = p.Add(p2);
+            DataStructure.Polynomial.Polynomial polyAdd = p.Add(p2);
 
             Assert.AreEqual(3, polyAdd.Coef(20));
             Assert.AreEqual(2, polyAdd.Coef(5));
@@ -59,17 +57,17 @@ namespace DataStructureTest
         [TestMethod]
         public void AddTestSameValue()
         {
-            Polynomial p = new Polynomial();
+            DataStructure.Polynomial.Polynomial p = new DataStructure.Polynomial.Polynomial();
             p.SetItem(20, 3);
             p.SetItem(5, 2);
             p.SetItem(0, 4);
 
-            Polynomial p2 = new Polynomial();
+            DataStructure.Polynomial.Polynomial p2 = new DataStructure.Polynomial.Polynomial();
             p2.SetItem(20, 3);
             p2.SetItem(5, 2);
             p2.SetItem(0, 4);
 
-            Polynomial polyAdd = p.Add(p2);
+            DataStructure.Polynomial.Polynomial polyAdd = p.Add(p2);
 
             Assert.AreEqual(6, polyAdd.Coef(20));
             Assert.AreEqual(4, polyAdd.Coef(5));
@@ -79,15 +77,15 @@ namespace DataStructureTest
         [TestMethod]
         public void MultTest1()
         {
-            Polynomial p = new Polynomial();
+            DataStructure.Polynomial.Polynomial p = new DataStructure.Polynomial.Polynomial();
             p.SetItem(1, 3);
             p.SetItem(0, 4);
 
-            Polynomial p2 = new Polynomial();
+            DataStructure.Polynomial.Polynomial p2 = new DataStructure.Polynomial.Polynomial();
             p2.SetItem(1, 3);
             p2.SetItem(0, 4);
 
-            Polynomial polyAdd = p.Mult(p2);
+            DataStructure.Polynomial.Polynomial polyAdd = p.Mult(p2);
 
             Assert.AreEqual(9, polyAdd.Coef(2));
             Assert.AreEqual(24, polyAdd.Coef(1));
@@ -97,18 +95,18 @@ namespace DataStructureTest
         [TestMethod]
         public void MultTest2()
         {
-            Polynomial p = new Polynomial();
+            DataStructure.Polynomial.Polynomial p = new DataStructure.Polynomial.Polynomial();
             p.SetItem(20, 3);
             p.SetItem(5, 2);
             p.SetItem(0, 4);
 
-            Polynomial p2 = new Polynomial();
+            DataStructure.Polynomial.Polynomial p2 = new DataStructure.Polynomial.Polynomial();
             p2.SetItem(4, 1);
             p2.SetItem(3, 10);
             p2.SetItem(2, 3);
             p2.SetItem(0, 1);
 
-            Polynomial polyAdd = p.Mult(p2);
+            DataStructure.Polynomial.Polynomial polyAdd = p.Mult(p2);
 
             Assert.AreEqual(3, polyAdd.Coef(24));
             Assert.AreEqual(30, polyAdd.Coef(23));
@@ -127,7 +125,7 @@ namespace DataStructureTest
         [TestMethod]
         public void EvalXequal0()
         {
-            Polynomial p = new Polynomial();
+            DataStructure.Polynomial.Polynomial p = new DataStructure.Polynomial.Polynomial();
             p.SetItem(4, 1);
             p.SetItem(3, 10);
             p.SetItem(2, 3);
@@ -139,7 +137,7 @@ namespace DataStructureTest
         [TestMethod]
         public void EvalXequal1()
         {
-            Polynomial p = new Polynomial();
+            DataStructure.Polynomial.Polynomial p = new DataStructure.Polynomial.Polynomial();
             p.SetItem(4, 1);
             p.SetItem(3, 10);
             p.SetItem(2, 3);
@@ -151,7 +149,7 @@ namespace DataStructureTest
         [TestMethod]
         public void EvalXequal2()
         {
-            Polynomial p = new Polynomial();
+            DataStructure.Polynomial.Polynomial p = new DataStructure.Polynomial.Polynomial();
             p.SetItem(4, 1);
             p.SetItem(3, 10);
             p.SetItem(2, 3);

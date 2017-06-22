@@ -1,7 +1,7 @@
 ﻿using DataStructure.StakeAndQueue;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace StackAndQueueTest.StakeAndQueueTest
+namespace DataStructureTest.StakeAndQueue.StakeAndQueueTest
 {
     [TestClass]
     public class MyStackTest

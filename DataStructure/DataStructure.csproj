@@ -42,21 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlockPair.cs" />
-    <Compile Include="FizzBuzz\FizzBuzzC.cs" />
-    <Compile Include="FizzBuzz\Mod35.cs" />
     <Compile Include="InfixToPostfix\InfixToPostfix.cs" />
+    <Compile Include="InterviewQuestion\BlockPair.cs" />
+    <Compile Include="InterviewQuestion\FizzBuzz\FizzBuzzC.cs" />
+    <Compile Include="InterviewQuestion\FizzBuzz\Mod35.cs" />
+    <Compile Include="InterviewQuestion\Palindrom.cs" />
+    <Compile Include="InterviewQuestion\Recursive.cs" />
     <Compile Include="LinkedList\MyEquivalence.cs" />
     <Compile Include="LinkedList\MyLinkList.cs" />
     <Compile Include="LinkedList\MyNode.cs" />
-    <Compile Include="MyMath\MyMath.cs" />
+    <Compile Include="Math\MyMath.cs" />
     <Compile Include="MazingProblem\MazingProblem.cs" />
     <Compile Include="MazingProblem\MazeGenerator.cs" />
-    <Compile Include="Palindrom.cs" />
     <Compile Include="Polynomial\Polynomial.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recursive.cs" />
+    <Compile Include="Sorting\MySorting.cs" />
     <Compile Include="StakeAndQueue\MyStack.cs" />
     <Compile Include="StakeAndQueue\MyCircularQueue.cs" />
     <Compile Include="StakeAndQueue\MyQueue.cs" />
@@ -65,8 +66,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="JsPractice\BlockPair.js" />
+    <Content Include="InterviewQuestion\JsPractice\BlockPair.js" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

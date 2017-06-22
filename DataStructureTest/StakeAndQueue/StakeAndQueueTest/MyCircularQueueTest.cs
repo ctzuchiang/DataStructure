@@ -1,42 +1,42 @@
 ﻿using DataStructure.StakeAndQueue;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace StackAndQueueTest.StakeAndQueueTest
+namespace DataStructureTest.StakeAndQueue.StakeAndQueueTest
 {
     [TestClass]
-    public class MyQueueTest
+    public class MyCircularQueueTest
     {
         [TestMethod]
-        public void QueueGetSize()
+        public void CircularQueueGetSize()
         {
             int maxSize = 100;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             Assert.AreEqual(100, myQueue.GetSize());
         }
 
         [TestMethod]
-        public void QueueEmptyandGetCount()
+        public void CircularQueueEmptyandGetCount()
         {
             int maxSize = 100;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             Assert.AreEqual(0, myQueue.GetCount());
         }
 
         [TestMethod]
-        public void QueuePushGetCount()
+        public void CircularQueuePushGetCount()
         {
             int maxSize = 100;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             myQueue.Push(1);
 
             Assert.AreEqual(1, myQueue.GetCount());
         }
 
         [TestMethod]
-        public void QueuePush3ItemGetCount()
+        public void CircularQueuePush3ItemGetCount()
         {
             int maxSize = 100;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             myQueue.Push(1);
             myQueue.Push("1");
             myQueue.Push("A");
@@ -45,10 +45,10 @@ namespace StackAndQueueTest.StakeAndQueueTest
         }
 
         [TestMethod]
-        public void QueuePush3ItemAndPopGetCount()
+        public void CircularQueuePush3ItemAndPopGetCount()
         {
             int maxSize = 100;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             myQueue.Push(1);
             myQueue.Push("1");
             myQueue.Push("A");
@@ -58,10 +58,10 @@ namespace StackAndQueueTest.StakeAndQueueTest
         }
 
         [TestMethod]
-        public void QueuePush3ItemAndPop3GetCountAndIsEmpty()
+        public void CircularQueuePush3ItemAndPop3GetCountAndIsEmpty()
         {
             int maxSize = 100;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             myQueue.Push(1);
             myQueue.Push("1");
             myQueue.Push("A");
@@ -73,10 +73,10 @@ namespace StackAndQueueTest.StakeAndQueueTest
         }
 
         [TestMethod]
-        public void QueuePush10ItemAndIsFull()
+        public void CircularQueuePush10ItemAndIsFull()
         {
             int maxSize = 10;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             myQueue.Push("A");
             myQueue.Push("B");
             myQueue.Push("C");
@@ -91,10 +91,10 @@ namespace StackAndQueueTest.StakeAndQueueTest
         }
 
         [TestMethod]
-        public void QueuePush4ItemAndAlreadyFull()
+        public void CircularQueuePush4ItemAndAlreadyFull()
         {
             int maxSize = 3;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             myQueue.Push("A");
             myQueue.Push("B");
             var bPushSuccess = myQueue.Push("C");
@@ -105,19 +105,19 @@ namespace StackAndQueueTest.StakeAndQueueTest
         }
 
         [TestMethod]
-        public void QueueEmptyAndPop()
+        public void CircularQueueEmptyAndPop()
         {
             int maxSize = 3;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             var obj = myQueue.Pop();
             Assert.IsNull(obj);
         }
 
         [TestMethod]
-        public void QueuePush10ItemAndToString()
+        public void CircularQueuePush10ItemAndToString()
         {
             int maxSize = 10;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             myQueue.Push("A");
             myQueue.Push("B");
             myQueue.Push("C");
@@ -132,10 +132,10 @@ namespace StackAndQueueTest.StakeAndQueueTest
         }
 
         [TestMethod]
-        public void QueuePush10ItemAndToString2()
+        public void CircularQueuePush10ItemAndToString2()
         {
             int maxSize = 10;
-            var myQueue = new MyQueue(maxSize);
+            var myQueue = new MyCircularQueue(maxSize);
             myQueue.Push("A");
             myQueue.Push("B");
             myQueue.Push("C");
@@ -150,6 +150,26 @@ namespace StackAndQueueTest.StakeAndQueueTest
             myQueue.Pop();
             myQueue.Pop();
             Assert.AreEqual("DEFGHIJ", myQueue.ItemToString());
+        }
+
+        [TestMethod]
+        public void CircularQueueFullAndPopPush5Times()
+        {
+            int maxSize = 3;
+            var myQueue = new MyCircularQueue(maxSize);
+            myQueue.Push("A");
+            myQueue.Push("B");
+            myQueue.Push("C");
+            myQueue.Pop();
+            myQueue.Push("D");
+            myQueue.Pop();
+            myQueue.Push("E");
+            myQueue.Pop();
+            myQueue.Push("F");
+            myQueue.Pop();
+            myQueue.Push("G");
+
+            Assert.AreEqual("EFG", myQueue.ItemToString());
         }
     }
 }

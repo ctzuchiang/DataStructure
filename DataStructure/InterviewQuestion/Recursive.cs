@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace DataStructure
+﻿namespace DataStructure.InterviewQuestion
 {
     public class Recursive
     {

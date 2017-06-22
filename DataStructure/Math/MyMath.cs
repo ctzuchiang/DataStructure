@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 
-namespace DataStructure.MyMath
+namespace DataStructure.Math
 {
     public class MyMath
     {
@@ -9,13 +9,13 @@ namespace DataStructure.MyMath
         {
             while ((a %= b) != 0 && (b %= a) != 0) ;
 
-            return Math.Max(a, b);
+            return System.Math.Max(a, b);
         }
 
         public int GCD1(int a, int b)
         {
-            var _a = Math.Max(a, b);
-            var _b = Math.Min(a, b);
+            var _a = System.Math.Max(a, b);
+            var _b = System.Math.Min(a, b);
             while (_b != 0)
             {
                 var tmp = _b;
@@ -31,7 +31,7 @@ namespace DataStructure.MyMath
             if ((a %= b) != 0 && (b %= a) != 0)
                 return GCD_Recursive(a, b);
 
-            return Math.Max(a, b);
+            return System.Math.Max(a, b);
         }
 
         public int GCD1_Recursive(int a, int b)
@@ -48,25 +48,23 @@ namespace DataStructure.MyMath
 
         public int[] Prime(int n)
         {
-            if (n < 3)
+            if (n < 2)
                 return new int[] { };
 
-            int[] isPrime = new int[n];
-
-            for (int i = 2; i < Math.Sqrt(n); i++)
+            int[] isPrime = new int[n+1];
+            for (var i = 2; i <= System.Math.Sqrt(n); i++)
             {
                 if (isPrime[i] == 0)
                 {
-                    for (int j = i * 2; j < n; j += i)
+                    for (var j = i * 2; j <= n; j += i)
                     {
                         isPrime[j] = 1;
                     }
                 }
             }
-
             var result = new List<int>();
 
-            for (int i = 2; i < n; i++)
+            for (int i = 2; i <= n; i++)
             {
                 if (isPrime[i] == 0)
                     result.Add(i);
@@ -75,5 +73,25 @@ namespace DataStructure.MyMath
             return result.ToArray();
         }
 
+        public IEnumerable<int> PrimeList(int n)
+        {
+            int[] list = new int[n + 1];
+            for (int i = 2; i <= n; i++)
+            {
+                list[i] = i;
+            }
+            for (int i=2;i<System.Math.Sqrt(n);i++)
+            {
+                if (list[i] != 0)
+                {
+                    for (int y=i*2;y<=n;y+=i)
+                    {
+                        list[y] = 0;
+                    }
+                }
+            }
+            return list.Where(t => t != 0).ToArray();
+
+        }
     }
 }

@@ -43,24 +43,10 @@
         <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
       </ItemGroup>
     </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
-      </ItemGroup>
-    </Otherwise>
+    <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="MyLinkListTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MyLinkListTests2.cs" />
-    <Compile Include="EquivalenceTest.cs" />
-    <Compile Include="MyPolynomialTest.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataStructure\DataStructure.csproj">
-      <Project>{2fd11c77-a920-4643-a74d-2528dca56b99}</Project>
-      <Name>DataStructure</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

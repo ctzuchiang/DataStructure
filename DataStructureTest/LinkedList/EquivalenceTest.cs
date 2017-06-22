@@ -1,7 +1,7 @@
 ﻿using DataStructure.LinkedList;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace MyLinkListTests
+namespace DataStructureTest.LinkedList
 {
     [Ignore]
     [TestClass]

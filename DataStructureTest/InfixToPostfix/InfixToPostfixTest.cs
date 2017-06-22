@@ -1,7 +1,6 @@
-﻿using DataStructure.InfixToPostfix;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DataStructureTest
+namespace DataStructureTest.InfixToPostfix
 {
     [TestClass]
     public class InfixToPostfixTest
@@ -12,7 +11,7 @@ namespace DataStructureTest
             var input = "A+B";
             var expected = "AB+";
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.ToPostfix(input);
             Assert.AreEqual(expected, output);
         }
@@ -23,7 +22,7 @@ namespace DataStructureTest
             var input = "A+B+C";
             var expected = "AB+C+";
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.ToPostfix(input);
             Assert.AreEqual(expected, output);
         }
@@ -34,7 +33,7 @@ namespace DataStructureTest
             var input = "A+B*C";
             var expected = "ABC*+";
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.ToPostfix(input);
             Assert.AreEqual(expected, output);
         }
@@ -45,7 +44,7 @@ namespace DataStructureTest
             var input = "A+B*C+D";
             var expected = "ABC*+D+";
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.ToPostfix(input);
             Assert.AreEqual(expected, output);
         }
@@ -56,7 +55,7 @@ namespace DataStructureTest
             var input = "A*B+C*D";
             var expected = "AB*CD*+";
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.ToPostfix(input);
             Assert.AreEqual(expected, output);
         }
@@ -67,7 +66,7 @@ namespace DataStructureTest
             var input = "A+B+C+D";
             var expected = "AB+C+D+";
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.ToPostfix(input);
             Assert.AreEqual(expected, output);
         }
@@ -78,7 +77,7 @@ namespace DataStructureTest
             var input = "a+b*c-d";
             var expected = "abc*+d-";
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.ToPostfix(input);
             Assert.AreEqual(expected, output);
         }
@@ -89,7 +88,7 @@ namespace DataStructureTest
             var input = "a+b*d+c/d";
             var expected = "abd*+cd/+";
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.ToPostfix(input);
             Assert.AreEqual(expected, output);
         }
@@ -100,7 +99,7 @@ namespace DataStructureTest
             var input = "2+3";
             var expected = 5;
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.Eval(input);
             Assert.AreEqual(expected, output);
         }
@@ -111,7 +110,7 @@ namespace DataStructureTest
             var input = "2+3*2";
             var expected = 8;
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.Eval(input);
             Assert.AreEqual(expected, output);
         }
@@ -122,7 +121,7 @@ namespace DataStructureTest
             var input = "2+3*2+1";
             var expected = 9;
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.Eval(input);
             Assert.AreEqual(expected, output);
         }
@@ -133,7 +132,7 @@ namespace DataStructureTest
             var input = "2*3+2*1";
             var expected = 8;
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.Eval(input);
             Assert.AreEqual(expected, output);
         }
@@ -144,7 +143,7 @@ namespace DataStructureTest
             var input = "2+3+2+1";
             var expected = 8;
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.Eval(input);
             Assert.AreEqual(expected, output);
         }
@@ -155,7 +154,7 @@ namespace DataStructureTest
             var input = "2+3*2-4";
             var expected = 4;
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.Eval(input);
             Assert.AreEqual(expected, output);
         }
@@ -166,7 +165,7 @@ namespace DataStructureTest
             var input = "1+2*3+4/2";
             var expected = 9;
 
-            var itp = new InfixToPostfix();
+            var itp = new DataStructure.InfixToPostfix.InfixToPostfix();
             var output = itp.Eval(input);
             Assert.AreEqual(expected, output);
         }

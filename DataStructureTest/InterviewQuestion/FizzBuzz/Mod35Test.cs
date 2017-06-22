@@ -1,18 +1,18 @@
 ﻿using System.Collections.Generic;
-using DataStructure.FizzBuzz;
+using DataStructure.InterviewQuestion.FizzBuzz;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DataStructureTest.FizzBuzz
+namespace DataStructureTest.InterviewQuestion.FizzBuzz
 {
     [TestClass]
-    public class FizzBuzzTest
+    public class Mod35Test
     {
         private List<string> _ExpectedList;
-        private FizzBuzzC _FizzBuzzC;
+        private Mod35 _Mod35;
 
         public void SetUp()
         {
-            _FizzBuzzC = new FizzBuzzC();
+            _Mod35 = new Mod35();
             _ExpectedList = new List<string>
             {
                 "1",
@@ -34,20 +34,17 @@ namespace DataStructureTest.FizzBuzz
         }
 
         [TestMethod]
-        public void FizzBuzz_3_Test()
+        public void FizzBuzz_1_Test()
         {
             SetUp();
-            Assert.AreEqual(_FizzBuzzC.FizzBuzz_3(15), _ExpectedList.ToString());
+            Assert.AreEqual(_Mod35.FizzBuzz_1(15), _ExpectedList.ToString());
         }
 
         [TestMethod]
-        public void GetModString_Test()
+        public void FizzBuzz_2_Test()
         {
             SetUp();
-            Assert.AreEqual(_FizzBuzzC.GetModString(1), "1");
-            Assert.AreEqual(_FizzBuzzC.GetModString(3), "Fizz");
-            Assert.AreEqual(_FizzBuzzC.GetModString(5), "Buzz");
-            Assert.AreEqual(_FizzBuzzC.GetModString(15), "FizzBuzz");
+            Assert.AreEqual(_Mod35.FizzBuzz_2(15), _ExpectedList.ToString());
         }
     }
 }

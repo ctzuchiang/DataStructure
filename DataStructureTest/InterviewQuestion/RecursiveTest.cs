@@ -1,7 +1,7 @@
-﻿using DataStructure;
+﻿using DataStructure.InterviewQuestion;
 using NUnit.Framework;
 
-namespace DataStructureTest
+namespace DataStructureTest.InterviewQuestion
 {
     [TestFixture]
     public class RecursiveTest

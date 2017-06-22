@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace DataStructure.FizzBuzz
+namespace DataStructure.InterviewQuestion.FizzBuzz
 {
     public class Mod35
     {
