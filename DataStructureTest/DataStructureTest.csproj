@@ -72,6 +72,7 @@
     <Compile Include="MyMath\MyMathTests.cs" />
     <Compile Include="Polynomial\PolynomialTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorting\MySortingTest.cs" />
     <Compile Include="StakeAndQueue\MazeingProblemTest\MazingProblemTest.cs" />
     <Compile Include="StakeAndQueue\StakeAndQueueTest\MyCircularQueueTest.cs" />
     <Compile Include="StakeAndQueue\StakeAndQueueTest\MyQueueTest.cs" />
