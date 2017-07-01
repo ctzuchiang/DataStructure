@@ -44,8 +44,7 @@
   <ItemGroup>
     <Compile Include="InfixToPostfix\InfixToPostfix.cs" />
     <Compile Include="InterviewQuestion\BlockPair.cs" />
-    <Compile Include="InterviewQuestion\FizzBuzz\FizzBuzzC.cs" />
-    <Compile Include="InterviewQuestion\FizzBuzz\Mod35.cs" />
+    <Compile Include="InterviewQuestion\FizzBuzz\FizzBuzzService.cs" />
     <Compile Include="InterviewQuestion\Palindrom.cs" />
     <Compile Include="InterviewQuestion\Recursive.cs" />
     <Compile Include="InterviewQuestion\StarTrees.cs" />

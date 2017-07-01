@@ -62,7 +62,6 @@
     <Compile Include="InfixToPostfix\InfixToPostfixTest.cs" />
     <Compile Include="InterviewQuestion\BlockPairTests.cs" />
     <Compile Include="InterviewQuestion\FizzBuzz\FizzBuzzTest.cs" />
-    <Compile Include="InterviewQuestion\FizzBuzz\Mod35Test.cs" />
     <Compile Include="InterviewQuestion\PalindromTests.cs" />
     <Compile Include="InterviewQuestion\RecursiveTest.cs" />
     <Compile Include="InterviewQuestion\StarTreesTest.cs" />
